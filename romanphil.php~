@@ -370,13 +370,7 @@ function patricks_woocommerce_catalog_orderby( $orderby ) {
 	return $orderby;
 }
 
-add_filter('woocommerce_default_catalog_orderby', 'custom_default_catalog_orderby');
 add_filter( 'woocommerce_catalog_orderby', 'patricks_woocommerce_catalog_orderby', 20 );
-
-function custom_default_catalog_orderby() {
-		return 'title-desc';
-}
-
 
 // Add the ability to sort by oldest to newest
 function patricks_woocommerce_get_catalog_ordering_args( $args ) {
